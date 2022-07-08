@@ -135,7 +135,7 @@ public class PlayerOne : MonoBehaviour {
 
     void JumpBuffer() {
          // Jump buffer
-        if(Input.GetButtonDown("JumpB")) {
+        if(Input.GetButtonDown("Fire1")) {
             jumpBufferCount = jumpBufferLength;
             anim.SetBool("Jump", true);
         } else {
@@ -153,7 +153,7 @@ public class PlayerOne : MonoBehaviour {
 
     void Jumping() {
         // This second method makes it possible to jump higher on keyPressed
-        if(Input.GetButtonUp("JumpB") && rb.velocity.y > 0) {
+        if(Input.GetButtonUp("Fire1") && rb.velocity.y > 0) {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .5f);
             CoyoteCounter = -1; // To prevent double jumping
         }
